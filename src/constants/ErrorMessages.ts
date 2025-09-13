@@ -1,4 +1,4 @@
-export enum ErrorType {
+export enum ErrorMessages {
   DEFAULT_VALUE = '',
   LOAD_TODOS = 'Unable to load todos',
   ADD_TODO = 'Unable to add a todo',

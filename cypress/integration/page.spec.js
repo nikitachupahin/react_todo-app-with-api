@@ -215,7 +215,7 @@ describe('', () => {
       todos.deleteButton(0).should('exist');
     });
 
-    it.skip('should not have loaders', () => {
+    it('should not have loaders', () => {
       todos.assertNotLoading(0);
       todos.assertNotLoading(1);
       todos.assertNotLoading(2);
@@ -496,7 +496,7 @@ describe('', () => {
         todos.assertNotCompleted(5);
       });
 
-      it.skip('should not show loaders for existing todos', () => {
+      it('should not show loaders for existing todos', () => {
         todos.assertNotLoading(0);
         todos.assertNotLoading(1);
         todos.assertNotLoading(2);
@@ -1034,7 +1034,7 @@ describe('', () => {
         todos.statusToggler(0).should('not.be.checked');
       });
 
-      it.skip('should cancel loading', () => {
+      it('should cancel loading', () => {
         page.flushJSTimers();
         todos.assertNotLoading(0);
       });
@@ -1070,7 +1070,7 @@ describe('', () => {
         todos.statusToggler(0).should('be.checked');
       });
 
-      it.skip('should cancel loading', () => {
+      it('should cancel loading', () => {
         page.flushJSTimers();
         todos.assertNotLoading(0);
       });
@@ -1534,7 +1534,7 @@ describe('', () => {
           todos.titleField(0).clear()
         });
 
-        it.skip('should cancel loading', () => {
+        it('should cancel loading', () => {
           todos.titleField(0).type('123{enter}');
           cy.wait('@renameRequest');
           page.flushJSTimers();
@@ -1579,7 +1579,7 @@ describe('', () => {
           cy.wait('@renameRequest');
         });
 
-        it.skip('should cancel loading', () => {
+        it('should cancel loading', () => {
           page.flushJSTimers();
           todos.assertNotLoading(0);
         });
